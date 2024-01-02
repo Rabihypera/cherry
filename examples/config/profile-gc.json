@@ -1,7 +1,7 @@
 {
   "env": "gc",
   "debug": true,
-  "print_level": "info",
+  "print_level": "debug",
   "cluster": {
     "discovery": {
       "mode": "nats",

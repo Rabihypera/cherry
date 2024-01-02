@@ -36,7 +36,7 @@ var (
 	cmd = Command{
 		writeBacklog:    64,
 		sysData:         make(map[string]interface{}),
-		heartbeatTime:   60 * time.Second,
+		heartbeatTime:   1 * time.Second,
 		handshakeBytes:  make([]byte, 0),
 		heartbeatBytes:  make([]byte, 0),
 		onPacketFuncMap: make(map[ppacket.Type]PacketFunc, 4),
