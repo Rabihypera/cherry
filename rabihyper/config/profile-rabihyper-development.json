@@ -1,0 +1,10 @@
+{
+  "env": "Rabihyper development",
+  "debug": true,
+  "print_level": "debug",
+  "include": [
+    "profile-rabihyper-cluster.json",
+    "profile-rabihyper-node.json",
+    "profile-rabihyper-log.json"
+  ]
+}

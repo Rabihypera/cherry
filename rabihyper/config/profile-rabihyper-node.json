@@ -1,0 +1,37 @@
+{
+  "node": {
+    "master": [
+      {
+        "node_id": "rabihyper-master",
+        "address": "",
+        "__settings__": {
+          "ref_logger": "master_log"
+        },
+        "enable": true
+      }
+    ],
+    "center": [
+      {
+        "node_id": "rabihyper-center",
+        "address": "",
+        "__settings__": {
+          "ref_logger": "center_log"
+        },
+        "enable": true
+      }
+    ],
+    "gate": [
+      {
+        "node_id": "rabihyper-gate-1",
+        "address": ":10010",
+        "__settings__": {
+          "db_id_list" : {
+            "game_db_id": "rabihyper-mysql-1"
+          },
+          "ref_logger": "gate_log"
+        },
+        "enable": true
+      }
+    ]
+  }
+}

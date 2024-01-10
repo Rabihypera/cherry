@@ -36,7 +36,7 @@ var (
 	cmd = Command{
 		writeBacklog:    64,
 		sysData:         make(map[string]interface{}),
-		heartbeatTime:   1 * time.Second,
+		heartbeatTime:   60 * time.Second,
 		handshakeBytes:  make([]byte, 0),
 		heartbeatBytes:  make([]byte, 0),
 		onPacketFuncMap: make(map[ppacket.Type]PacketFunc, 4),
@@ -135,6 +135,15 @@ func handshakeACKCommand(agent *Agent, _ *ppacket.Packet) {
 }
 
 func heartbeatCommand(agent *Agent, _ *ppacket.Packet) {
+
+	if clog.PrintLevel(zapcore.DebugLevel) {
+		clog.Debugf("[sid = %s,uid = %d] request heartbeat. [address = %s]",
+			agent.SID(),
+			agent.UID(),
+			agent.RemoteAddr(),
+		)
+	}
+
 	agent.SendRaw(cmd.heartbeatBytes)
 }
 

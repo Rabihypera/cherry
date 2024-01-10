@@ -18,7 +18,7 @@ require (
 	github.com/json-iterator/go v1.1.12
 	github.com/nats-io/nats.go v1.31.0
 	github.com/spf13/cast v1.5.1
-	github.com/urfave/cli/v2 v2.25.7
+	github.com/urfave/cli/v2 v2.27.1
 	go.uber.org/zap v1.26.0
 	google.golang.org/protobuf v1.32.0
 	gorm.io/gorm v1.25.5
